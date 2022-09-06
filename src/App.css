@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.main-container{
+    max-height:500px;
+    max-width:32rem;
+}
+.todo-form{
+    width:100%;
+    max-width:30rem;
+}
+.todo-input{
+    width:100%;
+}
+.add-button{
+    width:5rem;
+    background-color:lightpink;
+}
+.single-todo{
+    width:100%;
+    max-width:30rem;
+}
+input[type="checkbox"]{
+    accent-color:orangered;
+    cursor:pointer;
+}
+.delete{
+    cursor:pointer;
+}
+
+.isDone{
+    text-decoration:line-through;
+    background-color:lightblue;
+}
+.toDoList{
+    width:100%;
+    max-width:30rem;
+    overflow:auto;
+    min-height:5rem;
+    /* background-color:lightblue; */
+}
+.text-part{
+    width:90%;
+    word-break:break-all
+}
