@@ -15,6 +15,7 @@ const Todo = () => {
 
   return (
     <div className='d-flex justidy-content-center align-items-center flex-column mt-sm-5 main-container border border-1 border-dark m-auto p-3'>
+      <h2>TO-DO LIST</h2>
       <ToDoForm/>
       <ToDoList/>
       <div className="clear-wrapper mt-md-3">
