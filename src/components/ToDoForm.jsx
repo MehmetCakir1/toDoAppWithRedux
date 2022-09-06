@@ -14,7 +14,7 @@ const ToDoForm = () => {
     setText('');
     toastSuccessNotify("New item added successfully")
     }else{
-      toastWarnNotify("Please fill in the blanks")
+      toastWarnNotify("Please fill in the blank field")
     }
   };
 
