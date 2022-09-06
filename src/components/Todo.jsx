@@ -1,18 +1,24 @@
 import React from 'react'
 import ToDoForm from './ToDoForm'
 import ToDoList from "./ToDoList"
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearTodo } from '../redux/actions/toDoActions';
-import { toastSuccessNotify } from '../helpers/toastify';
+import { toastErrorNotify, toastSuccessNotify } from '../helpers/toastify';
 
 
 const Todo = () => {
+  const todoList = useSelector((state) => state.toDo.todoList);
   const dispatch = useDispatch();
   const handleClearList = () => {
-    dispatch(clearTodo());
+    if(todoList.length>0){
+          dispatch(clearTodo());
     toastSuccessNotify("All items removed successfully")
-  };
+    }else{
+      toastErrorNotify("No items to remove")
+    }
 
+  };
+  // console.log(todoList)
   return (
     <div className='d-flex justidy-content-center align-items-center flex-column mt-sm-5 main-container border border-1 border-dark m-auto p-3'>
       <h2>TO-DO LIST</h2>
